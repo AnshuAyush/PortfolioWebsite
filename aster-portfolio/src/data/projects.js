@@ -1,0 +1,5 @@
+export const projects = [
+  { number:'01', title:'Online Judge', description:'A fault-tolerant platform for evaluating code at scale with isolated execution workers.', nodes:['Code Execution','Contest System','Submission Tracking'], details:'Containerized code execution, queue-backed submissions, and real-time contest standings built for competitive programming workloads.' },
+  { number:'02', title:'Personal AI Assistant', description:'A context-aware assistant that turns fragmented knowledge into useful conversations.', nodes:['Spring AI','Chat History','OpenAI Integration'], details:'Retrieval-augmented conversations with durable chat history and a clean Spring AI orchestration layer.' },
+  { number:'03', title:'Distributed Rate Limiter', description:'A highly available traffic control service designed for multi-region APIs.', nodes:['Redis','Token Bucket','Sliding Window'], details:'Atomic Redis scripts, configurable policies, and precise sliding-window accounting protect services without adding latency.' },
+]

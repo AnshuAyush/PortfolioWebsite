@@ -1,0 +1,2 @@
+import { motion } from 'framer-motion'
+export default function ProjectGraph({ project, onSelect }) { return <motion.button className="project-card glass" onClick={() => onSelect(project)} whileHover={{y:-5}}><div className="project-number">NODE_{project.number}</div><h3>{project.title}</h3><p>{project.description}</p><div className="project-links">{project.nodes.map(n => <span key={n}>↗ {n}</span>)}</div></motion.button> }

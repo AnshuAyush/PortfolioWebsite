@@ -1,0 +1,5 @@
+import { useState } from 'react'
+import { X } from 'lucide-react'
+import ProjectGraph from '../components/ProjectGraph'
+import { projects } from '../data/projects'
+export default function Projects() { const [selected, setSelected] = useState(null); return <><div className="page-intro"><div className="eyebrow">05 / projects</div><h1>Systems in motion.</h1><p>A selection of problems I’ve explored, modeled as the connected systems they really are.</p></div><section className="project-grid section">{projects.map(p => <ProjectGraph key={p.title} project={p} onSelect={setSelected}/>)}</section>{selected && <div className="modal-backdrop" onClick={() => setSelected(null)}><div className="modal glass" onClick={e => e.stopPropagation()}><div className="modal-head"><div><div className="eyebrow">project_{selected.number}</div><h2>{selected.title}</h2></div><button className="close-button" onClick={() => setSelected(null)} aria-label="Close"><X/></button></div><p>{selected.details}</p><a className="button primary" href="mailto:anshuayush2002@gmail.com">Discuss this project</a></div></div>}</> }

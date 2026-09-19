@@ -1,0 +1,3 @@
+import { motion } from 'framer-motion'
+import { experience } from '../data/experience'
+export default function LinkedListTimeline() { return <div className="timeline">{experience.map((item, index) => <motion.div className="timeline-item" key={item.year} initial={{opacity:0, x:-15}} whileInView={{opacity:1,x:0}} viewport={{once:true}} transition={{delay:index*.08}}><div className="timeline-node"/><div className="timeline-year">{item.year}</div><div className="timeline-content glass"><h3>{item.title}</h3><div className="timeline-company">{item.company}</div><p>{item.description}</p></div></motion.div>)}</div> }

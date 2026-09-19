@@ -1,0 +1,2 @@
+import TerminalContact, { ContactLinks } from '../components/TerminalContact'
+export default function Contact() { return <><div className="page-intro"><div className="eyebrow">06 / contact</div><h1>Let’s build the next node.</h1><p>Have a system to design, a problem to untangle, or just want to talk shop? The terminal is listening.</p></div><section className="contact-grid section"><TerminalContact/><ContactLinks/></section></> }
